@@ -1,0 +1,10 @@
+This folder contains helper scripts for pulling topologies from
+perfSONAR Topology Services (ps_pull.py) and GENI Aggregate 
+Managers(am_pull.py). These scripts automatically invoke 'unisencoder' 
+and push the converted topology to UNIS instance.
+
+
+There are two ways to use ps_pull and am_pull. The first approach is to use 
+a configuration file (see config.sample).
+The second approach is to directly invoke ps_pull.py or am_pull.py with all 
+the required parameters (see am_pull.py –help for the required parameters).

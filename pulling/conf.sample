@@ -1,0 +1,34 @@
+# Both ps_pull and am_pull use very similar configuration format.
+# The differences are:
+#    1- am_pull.py config needs a section called [Aggregate_Managers]
+#    2- ps_pull.py config needs a section called [perfSONAR_Topologies]
+#    3- am_pull.py config needs a section called [OMNI]
+
+
+
+# The geni aggregate managers to be pulled
+# The key should be the URN for the aggregate manager
+# The value is the URL for the aggregate manager
+[Aggregate_Managers]
+emulab = https://www.emulab.net/protogeni/xmlrpc/am
+
+
+# The perfSONAT topology service to pulled
+# The key should be the URN for the topology exported by the topology service.
+# The value is the accesspoint for the perfSONAT topology service.
+[perfSONAR_Topologies]
+i2 = http://dcn-ts.internet2.edu:8012/perfSONAR_PS/services/topology
+
+# The URL for the UNIS instance for the data to be pushed to.
+[UNIS]
+url = http://dev.incntre.iu.edu
+
+# The location of omni.py and it's config file
+[OMNI]
+exec = ~/workdir/geni/gcf-2.0/src/omni.py
+config = ~/.gcf/omni_config
+
+# The location of the unisencoder
+[UNISENCODER]
+exec = unisencoder
+
